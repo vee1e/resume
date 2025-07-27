@@ -4,7 +4,7 @@
 % This template has been downloaded from:
 % http://www.LaTeXTemplates.com
 %
-% This class file defines the structure and design of the template. 
+% This class file defines the structure and design of the template.
 %
 % Original header:
 % Copyright (C) 2010 by Trey Hunner
@@ -38,7 +38,7 @@
 
 \def \addressSep {$\bullet$} % Set default address separator to a diamond
 
-% One, two or three address lines can be specified 
+% One, two or three address lines can be specified
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
@@ -95,11 +95,9 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
-  \vspace{-0.2em}
   \MakeUppercase{\textbf{#1}} % Section title
   \sectionskip
   \hrule % Horizontal line
-  \vspace{0.2em}
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{0em} % Margin within the section
   }
@@ -139,6 +137,6 @@
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section
 \def\nameskip{\smallskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
