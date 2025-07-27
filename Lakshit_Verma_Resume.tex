@@ -22,7 +22,7 @@
 \fi}
 \makeatother
 \parindent=0pt
-\usepackage[left=0.3in,top=0.3in,right=0.3in,bottom=0.3in]{geometry} % Document margins
+\usepackage[left=0.3in,top=0.2in,right=0.3in,bottom=0.2in]{geometry} % Document margins
 \hyphenpenalty=10000
 
 
@@ -40,11 +40,11 @@
 \begin{document}
 \begin{rSection}{Skills}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{5ex}} l }
-Languages \ & Python, C/C++, JavaScript, TypeScript, Bash, HTML/CSS, \LaTeX, SQL, Java \\
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{8ex}} l }
+Languages \ & Python, C/C++, JavaScript, TypeScript, Bash, HTML/CSS, \LaTeX, SQL \\
 Frameworks \& Libraries \ & Angular, FastAPI, Material UI, React, Next.js, PyQt, Node.js, Express.js, Tailwind CSS \\
 Technologies \ & MongoDB, REST APIs, JSON, XLSForm, Git, Docker, Make/CMake \\
-Cybersecurity \ & IDA Pro, Ghidra, Wireshark, Volatility, GDB, EnCase, BTRFS \\
+Cybersecurity \ & IDA Pro, Ghidra, Wireshark, Volatility, GDB, EnCase, Sleuthkit, FTK Imager, Btrfs \\
 Relevant Coursework \ & Computer Architecture, FPGA Design, Verilog, Microcontrollers, Embedded Systems \\
 Management \& Soft Skills \ & Leadership, Technical Management, Problem Solving, Communication, Teamwork, Training \\
 \end{tabular}
@@ -52,24 +52,24 @@ Management \& Soft Skills \ & Leadership, Technical Management, Problem Solving,
 
 \begin{rSection}{Technical Experience}
 
-\begin{rSubsection}{\bf Open Source Engineer}{\em May 2025 -- Present}{Dhwani RIS (via C4GT DMP) }{Remote}
-\item Designed and implemented a \textbf{FastAPI-based backend parser} enabling \textbf{bulk conversion} of Excel-based survey forms (XLSForm) to mForm-compatible JSON, supporting forms with up to \textbf{400 questions per upload}.
-\item Achieved \textbf{batch processing speeds of 2.16 seconds} for 9 forms ($\approx$\textbf{3,600 questions total}), with \textbf{per-question conversion latency averaging 0.15 ms} and \textbf{single-form save times of 240ms}.
-\item Built an \textbf{Angular frontend} for \textbf{real-time Excel uploads}, \textbf{live previews}, \textbf{error reporting}, and \textbf{batch operations}, integrated with \textbf{REST APIs} and \textbf{MongoDB} for seamless form lifecycle management.
-\item Conducted \textbf{comprehensive manual and automated QA}, validating JSON output against mForm templates and implementing \textbf{edge-case handling} to guarantee \textbf{reliability and future maintainability}.
-\item \faGithub~\href{https://github.com/vee1e/bulk-questionnaire-upload}{\underline{Source Code}}, \href{https://github.com/dhwani-ris/bulk-questionnaire-upload/issues/1}{\underline{GitHub Issue \#1}}
+\begin{rSubsection}{\bf Student Software Developer, Dhwani RIS}{\em May 2025 -- Present}{\href{https://codeforgovtech.in/dedicated_mentoring_program/}{Code for GovTech DMP}}{Remote}
+\item Designed and implemented a FastAPI-based backend parser from scratch enabling bulk conversion of Excel-based survey forms through XLSForm to mForm-compatible JSON, supporting forms with up to 400 questions per upload.
+\item Achieved batch processing speeds of 2.16 seconds for 9 forms ($\approx$3,600 questions total), with per-question conversion latency averaging 0.15 ms and single-form save times of 240ms.
+\item Built an Angular frontend from scratch for real-time Excel uploads, live previews, inline error reporting, and batch operations, integrated with REST APIs and MongoDB for seamless form lifecycle management.
+\item Conducted comprehensive manual and automated QA, validating JSON output against mForm templates and implementing edge-case handling to guarantee reliability and future maintainability.
+\item Links: \faGithub~\href{https://github.com/vee1e/bulk-questionnaire-upload}{\textbf{\underline{Source Code}}}, \href{https://github.com/dhwani-ris/bulk-questionnaire-upload/issues/1}{\textbf{\underline{GitHub Issue}}}
 \end{rSubsection}
 
-\begin{rSubsection}{\bf Team Member}{\em January 2024 -- Present}{Cryptonite}{Manipal, Karnataka, India $\cdot$ On-site}
-\item Extensively participated in \textbf{150+ Capture The Flag (CTF) competitions}, namely in \textbf{Forensics} and \textbf{Reverse Engineering}.
-\item Team achieved \textbf{\#2 national ranking} in 2025 and \textbf{\#3 national ranking} in 2024 on ctftime.org, competing against 200+ teams across India in prestigious competitions like \textbf{BSides Bangalore CTF}, \textbf{IIT BHU's Kashi CTF}, and \textbf{NahamCon CTF}.
-\item \textbf{Designed and developed 2 original CTF challenges} for \href{https://github.com/Cryptonite-MIT/niteCTF-2024/}{\underline{\textbf{niteCTF 2024}}}: a \textbf{Minecraft protocol analysis challenge} requiring \textbf{packet parsing} and \textbf{3D coordinate extraction} and an \textbf{8-bit VM challenge} with \textbf{NOR gate-based XOR encryption} that tested participants' skills in \textbf{virtual machine analysis} and \textbf{logic gate reverse engineering}.
-\item \textbf{Lead 20+ Junior Members} in the development and execution of the team's \textbf{OASIS CTF}, an intra-college entry-level cybersecurity competition that attracted \textbf{499 participants across 218 teams}, including challenge creation, infrastructure setup, and real-time technical support during the 24-hour event.
+\begin{rSubsection}{\bf Team Member}{\em January 2024 -- Present}{Cryptonite --- Major Student Project}{Manipal, Karnataka, India $\cdot$ On-site}
+\item Extensively participated in \href{https://ctftime.org/team/62713/}{150+ Capture The Flag (CTF)} competitions, namely in Forensics and Reverse Engineering.
+\item Team achieved \#2 national ranking in 2025 and \#3 national ranking in 2024 on ctftime.org, competing against 10,000+ teams worldwide in prestigious competitions like BSides Bangalore CTF, IIT BHU's Kashi CTF, and NahamCon CTF.
+\item Designed and developed 2 original CTF challenges for \href{https://github.com/Cryptonite-MIT/niteCTF-2024/}{niteCTF 2024}: a Minecraft protocol analysis challenge requiring packet parsing and 3D coordinate extraction and an 8-bit VM challenge with NOR gate-based XOR encryption that tested participants' skills in virtual machine analysis and logic gate reverse engineering.
+\item Lead 20+ Junior Members in the development and execution of the team's OASIS CTF, an intra-college entry-level cybersecurity competition that attracted 499 participants across 218 teams, including challenge creation, infrastructure setup, and real-time technical support during the 24-hour event.
 \end{rSubsection}
 
-\begin{rSubsection}{\bf Core Committee Member}{\em November 2023 -- October 2024}{Manipal University ACM Chapter}{Manipal, Karnataka, India $\cdot$ Hybrid}
-\item \textbf{Co-organized} \textbf{Classified ML workshop} with \textbf{100+ participants}, handling \textbf{dataset curation} and \textbf{technical support}.
-\item \textbf{Curated datasets} for \textbf{Epoch 2024 ML competition} with \textbf{100+ entries}, ensuring \textbf{data quality} across multiple domains.
+\begin{rSubsection}{\bf Core Committee Member}{\em November 2023 -- October 2024}{Manipal University ACM Chapter --- Student Club}{Manipal, Karnataka, India $\cdot$ Hybrid}
+\item Co-organized the ``Classified'' ML workshop with 100+ participants, handling dataset curation and technical support.
+\item Curated datasets for Epoch 2024 ML competition with 100+ entries, ensuring data quality across multiple domains.
 \end{rSubsection}
 
 \end{rSection}
@@ -77,33 +77,36 @@ Management \& Soft Skills \ & Leadership, Technical Management, Problem Solving,
 \begin{rSection}{Achievements}
 \begin{list}{$\bullet$}{\leftmargin=1em \itemindent=0em}
 \itemsep -0.5em
-\item \textbf{Recieved 1st Position and 1,00,000 INR} in the \href{https://www.sih.gov.in/sih2024/sih2024-grand-finale-result}{\textbf{\underline{Smart India Hackathon 2024}}}, under PS 1749.
-\item \textbf{Recieved 1st Position and 25,000 INR} in the GITxIITB CTF organized by KLS GIT, Belagavi and IIT Bombay Trust Lab.
-\item \textbf{Recieved 2nd Position and 10,000 INR} in the SoftLaunch Hackathon organized by the MIT Innovation Centre.
+\item Awarded \textbf{\#1 Position} and \textbf{1,00,000 INR} in the \href{https://www.sih.gov.in/sih2024/sih2024-grand-finale-result}{Smart India Hackathon 2024}, under PS/1749.
+\item Awarded \textbf{\#1 Position} and \textbf{25,000 INR} in the GITxIITB CTF organized by KLS GIT, Belagavi \& IIT Bombay Trust Lab.
+\item Awarded \textbf{\#1 Position} and \textbf{15,000 INR} in the KJSSE CTF organized by KJ Somaiya College of Engineering, Mumbai.
+\item Awarded \textbf{\#2 Position} and \textbf{10,000 INR} in the SoftLaunch Hackathon organized by the MIT Innovation Centre.
+\item Finalist of Cython 2024, a national-level hackathon organized by FITT, IIT Delhi.
 \end{list}
 \end{rSection}
 
-\MakeUppercase{\textbf{Projects}}
-\medskip
-\hrule
-\begin{list}{$\bullet$}{\leftmargin=1em \itemindent=0em}
-\itemsep -0.5em
-\item {\bf NiteWatch} \hfill {\em Python, PyQT, BTRFS, XFS, EnCase, DFIR, Blue Teaming} \\
-- \textbf{Parsed XFS and BTRFS} file systems \textbf{from scratch} using \textbf{no external libraries} for low-level data recovery. \\
-- Built \textbf{intuitive PyQt frontend} for \textbf{easy visual analysis} and \textbf{user-friendly file system exploration}. \\
-- Integrated \textbf{AI analysis} for \textbf{DFIR-relevant insights} and \textbf{automated threat detection}.
-\item {\bf YatraGPT}~\faGithub~\href{https://github.com/vee1e/finova}{\underline{vee1e/finova}} \hfill {\em React, Gemini API, Typescript, NextJS} \\
-- Built an \textbf{AI travel assistant} using \textbf{Gemini API} for \textbf{trip planning} with \textbf{real-time recommendations}. \\
-- Integrated \textbf{IRCTC API} for \textbf{train ticket search} and implemented \textbf{backtracking algorithm} for \textbf{optimal route finding}. \\
-- Deployed on \textbf{Vercel} with \textbf{TypeScript} and \textbf{Next.js} for \textbf{scalable performance} and \textbf{modern web standards}.
-\end{list}
-\vspace{0.5em}
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{\bf NiteWatch~|~Codebase Proprietary}{\em Python, PyQT, Btrfs, XFS, EnCase, DFIR, Blue Teaming}{}{}
+\item Parses XFS and Btrfs file systems from scratch using no external libraries for full recovery of deleted data and metadata.
+\item Contains an intuitive PyQt frontend for easy visual analysis and user-friendly file system exploration.
+\item Integrates AI analysis using OpenAI's APIs for DFIR-relevant insights and automated threat detection.
+\end{rSubsection}
+
+\begin{rSubsection}{\bf YatraGPT~|~\href{https://github.com/vee1e/finova}{\underline{Source Repository}~\faGithub}}{\em React, Gemini API, Typescript, NextJS}{}{}
+\item An AI travel assistant using Gemini API for trip planning with real-time recommendations.
+\item Integrated IRCTC API for train ticket search and implemented backtracking algorithm for optimal route finding.
+\item Deployed on Vercel with TypeScript and Next.js for scalable performance and modern web standards.
+\end{rSubsection}
+
+\end{rSection}
 
 \begin{rSection}{Education}
-    {\bf Manipal Institute of Technology, Manipal, Karnataka} \hfill {July 2023 -- August 2027}  \\
-    {\em Bachelor of Technology --- Electronics Engineering (VLSI Design \& Technology)} \hfill \\
+    {\bf Manipal Institute of Technology, Manipal, Karnataka} \hfill \textit{July 2023 -- August 2027}  \\
+    {Bachelor of Technology --- Electronics Engineering (VLSI Design \& Technology)} \hfill Currently in Vth Semester \\
 \end{rSection}
 
+\vspace{-0.8em}
 \small \begin{center}This resume was last updated on \DTMnow.\\\end{center}
 
 \end{document}
