@@ -26,6 +26,8 @@ jobs:
           sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
       - name: Compile Resume
+        env:
+          TZ: "Asia/Kolkata"
         run: |
           mkdir -p docs
           pdflatex -output-directory=docs -halt-on-error Lakshit_Verma_Resume.tex

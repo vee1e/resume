@@ -25,7 +25,7 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
-\usepackage{datetime2}
+\usepackage[showzone=false]{datetime2}
 
 \pagestyle{empty} % Suppress page numbers
 
