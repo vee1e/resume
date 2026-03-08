@@ -1,0 +1,38 @@
+name: Compile Resume
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'Lakshit_Verma_Resume.tex'
+      - '*.cls'
+  workflow_dispatch:
+
+jobs:
+  build_and_commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+      - name: Compile Resume
+        run: |
+          mkdir -p docs
+          pdflatex -output-directory=docs -halt-on-error Lakshit_Verma_Resume.tex
+          pdflatex -output-directory=docs -halt-on-error Lakshit_Verma_Resume.tex
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: update compiled resume PDF"
+          file_pattern: "docs/Lakshit_Verma_Resume.pdf"
