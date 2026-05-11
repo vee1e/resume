@@ -1,142 +1,73 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV - RESUME CLASS FILE
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% This class file defines the structure and design of the template.
-%
-% Original header:
-% Copyright (C) 2010 by Trey Hunner
-%
-% Copying and distribution of this file, with or without modification,
-% are permitted in any medium without royalty provided the copyright
-% notice and this notice are preserved. This file is offered as-is,
-% without any warranty.
-%
-% Created by Trey Hunner and modified by www.LaTeXTemplates.com
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resume Class File
+% Based on template by Trey Hunner (2010), modified by LaTeXTemplates.com
+% Distributed as-is, without warranty.
 
-\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
+\ProvidesClass{resume}[2010/07/10 v1.0 Resume class]
 
-\LoadClass[10.95pt,letterpaper]{article} % Font size and paper type
+\LoadClass[10.95pt,letterpaper]{article}
 
-\usepackage[parfill]{parskip} % Remove paragraph indentation
-\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
-\usepackage{ifthen} % Required for ifthenelse statements
-\usepackage[showzone=false]{datetime2}
+\usepackage[parfill]{parskip}
+\usepackage{array}
+\usepackage{accsupp}
 
-\pagestyle{empty} % Suppress page numbers
+\pagestyle{empty}
 
-%----------------------------------------------------------------------------------------
-%	HEADINGS COMMANDS: Commands for printing name and address
-%----------------------------------------------------------------------------------------
+%--- Name & Contact Header ---
 
-\def \name#1{\def\@name{#1}} % Defines the \name command to set name
-\def \@name {} % Sets \@name to empty by default
+\def\name#1{\def\@name{#1}}
+\def\@name{}
 
-\def \addressSep {$\bullet$} % Set default address separator to a diamond
+\def\addressSep{\hspace{1.2em}}
 
-% One, two or three address lines can be specified
-\let \@addressone \relax
-\let \@addresstwo \relax
-\let \@addressthree \relax
+\let\@contactline\relax
+\def\address#1{\def\@contactline{#1}}
 
-% \address command can be used to set the first, second, and third address (last 2 optional)
-\def \address #1{
-  \@ifundefined{@addresstwo}{
-    \def \@addresstwo {#1}
-  }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
-}
-
-% \printaddress is used to style an address line (given as input)
-\def \printaddress #1{
+\def\printaddress#1{%
   \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
+    \def\\{\addressSep}%
+    \centerline{#1}%
   \endgroup
-  \par
-  \addressskip
+  \par\smallskip
 }
 
-% \printname is used to print the name as a page header
-\def \printname {
+\def\printname{%
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+    \hfil{\BeginAccSupp{ActualText=\@name}\MakeUppercase{\huge\bf\@name}\EndAccSupp{}}\hfil
+    \smallskip\break
   \endgroup
 }
-
-%----------------------------------------------------------------------------------------
-%	PRINT THE HEADING LINES
-%----------------------------------------------------------------------------------------
 
 \let\ori@document=\document
-\renewcommand{\document}{
-  \ori@document  % Begin document
-  \printname % Print the name specified with \name
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-    \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
-    \printaddress{\@addressthree}}
+\renewcommand{\document}{%
+  \ori@document
+  \printname
+  \@ifundefined{@contactline}{}{\printaddress{\@contactline}}%
 }
 
-%----------------------------------------------------------------------------------------
-%	SECTION FORMATTING
-%----------------------------------------------------------------------------------------
+%--- Section ---
 
-% Defines the rSection environment for the large sections within the CV
-\newenvironment{rSection}[1]{ % 1 input argument - section name
-  \MakeUppercase{\textbf{#1}} % Section title
-  \sectionskip
-  \hrule % Horizontal line
-  \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{0em} % Margin within the section
-  }
-  \item[]
-}{
+\newenvironment{rSection}[1]{%
+  \par\vspace{0.5em}
+  \noindent\BeginAccSupp{ActualText=#1}\MakeUppercase{\textbf{#1}}\EndAccSupp{}\par
+  \vspace{0.4em}%
+  \hrule
+  \vspace{0em}%
+}{%
+  \par
+}
+
+%--- Subsection (work experience entry) ---
+
+\newenvironment{rSubsection}[4]{%
+  % #1=title, #2=dates, #3=subtitle, #4=location
+  {\parfillskip=0pt
+    \noindent{\bf #1} \hfill {#2}%
+    \if\relax\detokenize{#3}\relax\else
+      \par\vspace{-\parskip}\noindent{#3} \hfill {#4}%
+    \fi
+  \par}%
+  \begin{list}{-}{\leftmargin=1em \itemindent=0em \topsep=-0.3em \partopsep=0pt}
+    \itemsep -0.5em
+}{%
   \end{list}
 }
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE FORMATTING
-%----------------------------------------------------------------------------------------
-
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- \vspace{-0.2em}
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
-  }
-  \begin{list}{$\bullet$}{\leftmargin=1em \itemindent=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-}
-\newenvironment{rSubsectionContd}[2]{ % 4 input arguments - company name, year(s) employed, job title and location
- \vspace{-0.5em}
- \ifthenelse{\equal{#2}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  {\em #2} \hfill {\em #1} % Italic job title and location
-  }
-  \begin{list}{$\bullet$}{\leftmargin=1em \itemindent=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0em} % Some space after the list of bullet points
-}
-
-% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\huge} % Size of the name at the top of the document
-\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section
-\def\nameskip{\smallskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
