@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakshit Verma's Resume</title>
-    <meta name="description" content="Resume of Lakshit Verma.">
+    <title>Lakshit Verma — Resume | Software &amp; Security Engineer</title>
+    <meta name="description" content="Resume of Lakshit Verma: software engineer and application security analyst. GSoC/Mandiant FLOSS, AI security research, SAST, malware analysis, and full-stack systems. MIT Manipal.">
+    <meta name="author" content="Lakshit Verma">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lverma.com/resume">
+    <link rel="icon" href="https://lverma.com/assets/favicon.png" type="image/png">
+    <meta name="theme-color" content="#18181b">
 
     <!-- Open Graph / link preview metadata -->
-    <meta property="og:title" content="Lakshit Verma - Resume">
-    <meta property="og:description" content="View the resume of Lakshit Verma.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vee1e.github.io/resume/">
-    <meta property="og:image" content="https://vee1e.github.io/resume/og-thumbnail.png">
-    <meta property="og:image:width" content="2550">
-    <meta property="og:image:height" content="3300">
-    <meta property="og:image:alt" content="Preview of Lakshit Verma's resume">
+    <meta property="og:title" content="Lakshit Verma — Resume | Software &amp; Security Engineer">
+    <meta property="og:description" content="Software engineer and application security analyst. GSoC/Mandiant, AI security, SAST, malware analysis. MIT Manipal.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://lverma.com/resume">
+    <meta property="og:image" content="https://lverma.com/assets/resume-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Lakshit Verma — Software Engineer and Application Security">
+    <meta property="og:site_name" content="Lakshit Verma">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X card metadata -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lakshit Verma - Resume">
-    <meta name="twitter:description" content="View the resume of Lakshit Verma.">
-    <meta name="twitter:image" content="https://vee1e.github.io/resume/og-thumbnail.png">
+    <meta name="twitter:title" content="Lakshit Verma — Resume | Software &amp; Security Engineer">
+    <meta name="twitter:description" content="Software engineer and application security analyst. GSoC/Mandiant, AI security, SAST, malware analysis. MIT Manipal.">
+    <meta name="twitter:image" content="https://lverma.com/assets/resume-og.png">
+    <meta name="twitter:image:alt" content="Lakshit Verma — Software Engineer and Application Security">
+    <meta name="twitter:creator" content="@veelesec">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Lakshit Verma",
+      "url": "https://lverma.com",
+      "email": "mailto:vermalucky2004@gmail.com",
+      "telephone": "+91-8448058867",
+      "jobTitle": ["Software Engineer", "Application Security Analyst"],
+      "description": "Software engineer and application security analyst specializing in malware analysis, SAST, and open source security tooling.",
+      "sameAs": [
+        "https://github.com/vee1e",
+        "https://www.linkedin.com/in/lakshitverma/",
+        "https://twitter.com/veelesec",
+        "https://blog.lverma.com",
+        "https://lverma.com"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Manipal Institute of Technology"
+      },
+      "knowsAbout": [
+        "Application Security",
+        "Malware Analysis",
+        "Python",
+        "Reverse Engineering",
+        "SAST",
+        "Digital Forensics"
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -28,7 +69,9 @@
             --text: #18181b;
             --muted: #52525b;
             --card: #ffffff;
+            --border: #e4e4e7;
             --shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+            --accent: #18181b;
         }
 
         * {
@@ -40,18 +83,18 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         main {
             max-width: 920px;
             margin: 0 auto;
-            padding: 3rem 1.25rem;
+            padding: 3rem 1.25rem 4rem;
         }
 
-        header {
+        header.page-header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
 
         h1 {
@@ -62,8 +105,29 @@
         }
 
         p.subtitle {
-            margin: 0;
+            margin: 0 0 0.75rem;
             color: var(--muted);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 1.25rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-links a:hover {
+            border-bottom-color: var(--text);
         }
 
         .preview-card {
@@ -71,6 +135,7 @@
             border-radius: 12px;
             padding: 1rem;
             box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
         }
 
         .preview-card img {
@@ -78,12 +143,16 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            border: 1px solid #e4e4e7;
+            border: 1px solid var(--border);
         }
 
         .actions {
-            margin-top: 1.75rem;
+            margin: 0 0 2.5rem;
             text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
         }
 
         .btn {
@@ -105,39 +174,140 @@
             transform: translateY(-1px);
         }
 
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: #fafafa;
+        }
+
         .btn svg {
             width: 1.1rem;
             height: 1.1rem;
             fill: currentColor;
         }
 
-        footer {
+        .resume-body {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .resume-body h2 {
+            margin: 1.75rem 0 0.75rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.4rem;
+        }
+
+        .resume-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .resume-body h3 {
+            margin: 1rem 0 0.25rem;
+            font-size: 1rem;
+            font-weight: 650;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin: 0 0 0.5rem;
+        }
+
+        .resume-body ul {
+            margin: 0.35rem 0 0.75rem;
+            padding-left: 1.2rem;
+        }
+
+        .resume-body li {
+            margin-bottom: 0.3rem;
+        }
+
+        .skill-line {
+            margin: 0.35rem 0;
+            font-size: 0.95rem;
+        }
+
+        .skill-line strong {
+            font-weight: 650;
+        }
+
+        .project-item {
+            margin-bottom: 0.85rem;
+        }
+
+        .project-item p {
+            margin: 0.25rem 0 0;
+            color: #3f3f46;
+            font-size: 0.95rem;
+        }
+
+        footer.page-footer {
             margin-top: 2.5rem;
             text-align: center;
             color: var(--muted);
             font-size: 0.875rem;
         }
 
+        footer.page-footer nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        footer.page-footer a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        footer.page-footer a:hover {
+            border-bottom-color: var(--text);
+        }
+
         @media (max-width: 600px) {
             main {
-                padding: 1.5rem 1rem;
+                padding: 1.5rem 1rem 3rem;
             }
 
             h1 {
                 font-size: 1.5rem;
+            }
+
+            .resume-body {
+                padding: 1.25rem 1rem;
             }
         }
     </style>
 </head>
 <body>
     <main>
-        <header>
+        <header class="page-header">
             <h1>Lakshit Verma</h1>
-            <p class="subtitle">Resume</p>
+            <p class="subtitle">Software Engineer &amp; Application Security Analyst</p>
+            <ul class="contact-links">
+                <li><a href="mailto:vermalucky2004@gmail.com">vermalucky2004@gmail.com</a></li>
+                <li><a href="tel:+918448058867">+91 8448058867</a></li>
+                <li><a href="https://github.com/vee1e" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/lakshitverma/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+                <li><a href="https://lverma.com" rel="noopener noreferrer" target="_blank">Website</a></li>
+                <li><a href="https://blog.lverma.com" rel="noopener noreferrer" target="_blank">Blog</a></li>
+            </ul>
         </header>
 
         <div class="preview-card">
-            <img src="og-thumbnail.png" alt="Preview of Lakshit Verma's resume">
+            <img src="og-thumbnail.png" alt="Full-page preview of Lakshit Verma's resume PDF" width="2550" height="3300" loading="eager">
         </div>
 
         <div class="actions">
@@ -147,10 +317,109 @@
                 </svg>
                 Download PDF
             </a>
+            <a class="btn btn-secondary" href="Lakshit_Verma_Resume.pdf" target="_blank" rel="noopener">
+                Open PDF
+            </a>
         </div>
 
-        <footer>
-            Last updated automatically from the latest source.
+        <article class="resume-body" id="resume-text">
+            <h2>Skills</h2>
+            <p class="skill-line"><strong>Languages:</strong> Python, C, C++, TypeScript, Rust, Bash Scripting</p>
+            <p class="skill-line"><strong>Security:</strong> Burp Suite, eBPF, IDA Pro, Ghidra, Wireshark, GDB, Nmap, OWASP Top 10, MITRE ATT&amp;CK</p>
+            <p class="skill-line"><strong>Technologies:</strong> Git, Docker, Kubernetes, GitHub Actions, Vercel, Cloudflare Workers, Railway</p>
+
+            <h2>Technical Experience</h2>
+
+            <section>
+                <h3>Software Engineer — Google Summer of Code (GSoC) under Mandiant</h3>
+                <p class="meta">May 2026 – August 2026 · Remote</p>
+                <ul>
+                    <li>Extended the FLOSS malware string extraction framework with features derived from an experimental branch.</li>
+                    <li>Implemented a cross-platform PE/ELF/Mach-O executable parser for extracting binary metadata, sections and functions.</li>
+                    <li>Analyzed 150K+ malware samples to automate creating library string databases with CI/CD, slashing build times by 95%.</li>
+                    <li>Shipped a graphical web interface to visualize the tool's output reaching 100% CLI feature parity.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Undergraduate Researcher — Dr. TMA Pai Endowment Chair (MAHE) and Schneider Electric</h3>
+                <p class="meta">September 2025 – June 2026 · Manipal, Karnataka, India</p>
+                <ul>
+                    <li>Built an AI security engine with 329K+ CVEs and 3.3K+ attack chains, coupling SAST, binary analysis and exploit testing.</li>
+                    <li>Cut complex audits by 12x, automating ATT&amp;CK → D3FEND correlation, SARIF export, and interactive threat graphs.</li>
+                    <li>Shipped a regex-based reviewer at 3000 files/sec with 1000+ rules, flagging 23+ CWE classes with no API cost.</li>
+                    <li>Automated binary analysis with a sandbox and Radare2, with a confirm-patch-verify loop for agent-suggested fixes.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Security Engineer Intern — NoHack Labs</h3>
+                <p class="meta">March 2026 – May 2026 · Remote</p>
+                <ul>
+                    <li>Used the company's AI-SAST platform to find 20+ bugs and 5+ critical issues in the open-source project OpenClaw.</li>
+                    <li>Delivered detailed VAPT documentation for scanned applications with extensive remediation guides for faster issue resolution.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Software Engineer — Code for GoodTech Dedicated Mentoring Program</h3>
+                <p class="meta">May 2025 – August 2025 · Remote</p>
+                <ul>
+                    <li>Created a FastAPI backend to parse and bulk-upload XLSForm files for validation, management and deletion.</li>
+                    <li>Deployed a modular Angular frontend with inline errors, reducing file validation and remediation time by 4x.</li>
+                    <li>Implemented comprehensive testing for frontend and backend components, leading to code coverage of over 72%.</li>
+                </ul>
+            </section>
+
+            <h2>Achievements</h2>
+            <ul>
+                <li>1st Position, Smart India Hackathon 2024 at IIT Jammu under PSID 1749. <strong>Dec 2024</strong></li>
+                <li>1st Position, GITxIITB Capture the Flag (CTF) sponsored by IIT Bombay Trust Lab. <strong>May 2025</strong></li>
+                <li>1st Position, ISEA-ISAP hardware security hackathon organized at IIT Madras. <strong>Jan 2026</strong></li>
+                <li>Awarded a Shubhra Kar Linux Foundation Training Scholarship (LiFT), one of only 500 recipients worldwide. <strong>June 2026</strong></li>
+            </ul>
+
+            <h2>Projects</h2>
+            <div class="project-item">
+                <strong>MFT Parser</strong>
+                <p>Cross-platform C++ CLI for processing Windows artifacts with metadata extraction and deleted file recovery. Uses a portable CMake-based build system with recursive artifact detection.</p>
+            </div>
+            <div class="project-item">
+                <strong>NiteWatch</strong>
+                <p>Digital forensics tool for Linux filesystem recovery. Parses from raw bytes with no external libraries, reconstructs B+ trees, and restores deleted files with full metadata. PyQt GUI for visualizing inode structures and superblock parsing.</p>
+            </div>
+            <div class="project-item">
+                <strong>moomer</strong>
+                <p>Rust application for capturing and interactively viewing high-resolution screenshots on macOS. Zoomable, pannable view with AppleScript integration for window transitions.</p>
+            </div>
+
+            <h2>Positions of Responsibility</h2>
+            <section>
+                <h3>Board Member and Forensics Subsystem Head — Cryptonite</h3>
+                <p class="meta">Academic Cybersecurity Team</p>
+                <ul>
+                    <li>Competed in weekly international CTF competitions, maintaining the team's top 3 national ranking for 2+ years.</li>
+                    <li>Planned, created and executed 10+ weeks of training material for junior team members spanning 2 domains.</li>
+                    <li>Authored 5+ security exercises for the team's flagship, international-level CTF with 3,500+ participants.</li>
+                </ul>
+            </section>
+
+            <h2>Education</h2>
+            <section>
+                <h3>Manipal Institute of Technology, Manipal</h3>
+                <p class="meta">July 2023 – August 2027</p>
+                <p>Bachelor of Technology in Electronics Engineering (Minor in Computing)</p>
+            </section>
+        </article>
+
+        <footer class="page-footer">
+            <nav aria-label="Related sites">
+                <a href="https://lverma.com">lverma.com</a>
+                <a href="https://blog.lverma.com">blog</a>
+                <a href="https://github.com/vee1e">github</a>
+                <a href="https://www.linkedin.com/in/lakshitverma/">linkedin</a>
+            </nav>
+            <p>Last updated <time datetime="2026-07-06">2026-07-06</time> · Prefer the <a href="Lakshit_Verma_Resume.pdf">PDF</a> for applications.</p>
         </footer>
     </main>
 </body>
