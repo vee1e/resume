@@ -10,11 +10,18 @@ on:
       - '*.cls'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   build_and_commit:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
@@ -42,3 +49,14 @@ jobs:
         with:
           commit_message: "docs: update compiled resume PDF and thumbnail"
           file_pattern: "docs/Lakshit_Verma_Resume.pdf docs/og-thumbnail.png"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v5
