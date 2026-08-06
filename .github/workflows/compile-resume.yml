@@ -8,7 +8,6 @@ on:
     paths:
       - 'Lakshit_Verma_Resume.tex'
       - '*.cls'
-      - 'index.html'
   workflow_dispatch:
 
 jobs:
@@ -38,13 +37,8 @@ jobs:
         run: |
           pdftoppm -png -r 300 -singlefile docs/Lakshit_Verma_Resume.pdf docs/og-thumbnail
 
-      - name: Render landing page
-        run: |
-          GITHUB_PAGES_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
-          sed "s|{{OG_BASE_URL}}|${GITHUB_PAGES_URL}|g" index.html > docs/index.html
-
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: update compiled resume PDF, thumbnail, and landing page"
-          file_pattern: "docs/Lakshit_Verma_Resume.pdf docs/og-thumbnail.png docs/index.html"
+          commit_message: "docs: update compiled resume PDF and thumbnail"
+          file_pattern: "docs/Lakshit_Verma_Resume.pdf docs/og-thumbnail.png"
