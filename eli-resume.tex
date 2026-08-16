@@ -1,0 +1,97 @@
+\documentclass{resume}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome}
+\usepackage[inline]{enumitem}
+\usepackage[showzone=false]{datetime2}
+\usepackage[left=0.3in,top=0.12in,right=0.3in,bottom=0.12in]{geometry}
+\hyphenpenalty=10000
+
+\makeatletter
+\renewenvironment{rSection}[1]{%
+  \par\vspace{0.12em}
+  \noindent\BeginAccSupp{ActualText=#1}\MakeUppercase{\textbf{#1}}\EndAccSupp{}\par
+  \vspace{0.15em}%
+  \hrule
+  \vspace{0em}%
+}{%
+  \par
+}
+\makeatother
+
+\name{Lakshit Verma}
+\address{\href{tel:+918448058867}{+91 8448058867} \\ \href{mailto:vermalucky2004@gmail.com}{vermalucky2004@gmail.com} \\ \href{https://github.com/vee1e}{github.com/vee1e} \\ \href{https://www.linkedin.com/in/lakshitverma/}{linkedin.com/in/lakshitverma}}
+
+\begin{document}
+
+\begin{rSection}{Summary}
+Software Engineer at MIT Manipal with full-stack Python, cloud-native CI/CD, AI/ML \& NLP, and data automation. GSoC contributor at Mandiant and lead of a top-3 national engineering team.
+\end{rSection}
+
+\vspace{-0.6em}
+\begin{rSection}{Skills}
+\textbf{Languages:} Python, C, C++, TypeScript, Rust, Bash Scripting  \\
+\textbf{AI/ML \& NLP:} Gemini/LLM APIs, agentic AI automation, prompt engineering, data pipelines \\
+\textbf{Full-Stack \& Web:} React, Next.js, Angular, FastAPI, Flask, REST APIs, HTML/CSS, React Native \\
+\textbf{Cloud \& DevOps:} Docker, Kubernetes, GitHub Actions (CI/CD), Vercel, Cloudflare Workers, Railway \\
+\textbf{Security \& Tools:} Burp Suite, Ghidra, Wireshark, Nmap, OWASP Top 10, MITRE ATT\&CK; Git, Agile, SDLC
+\end{rSection}
+
+\vspace{-0.6em}
+\begin{rSection}{Technical Experience}
+
+\begin{rSubsection}{\bf Software Engineer}{May 2026 - August 2026}{Google Summer of Code (GSoC) under Mandiant}{Remote}
+\item Extended the FLOSS malware string extractor in Python, porting experimental-branch features.
+\item Implemented a cross-platform PE/ELF/Mach-O executable parser for extracting binary metadata, sections and functions.
+\item Automated 150K+ malware samples into library string databases via CI/CD, cutting build times by 95\%.
+\item Shipped a graphical web interface reaching 100\% CLI feature parity across the full stack.
+\end{rSubsection}
+\begin{rSubsection}{\bf Undergraduate Researcher}{September 2025 - June 2026}{Schneider Electric and MAHE}{Manipal, Karnataka, India}
+\item Engineered an AI platform (Python, FastAPI) ingesting 329K+ CVEs and 3.3K+ attack chains.
+\item Automated ATT\&CK to D3FEND correlation, SARIF export and threat-graph visualization, cutting audits by 12x.
+\item Built a regex-based analysis engine scanning 3000 files/sec with 1000+ rules, flagging 23+ CWE classes at zero API cost.
+\item Automated binary analysis with sandboxing and Radare2 via a confirm-patch-verify loop for agentic-AI fixes.
+\end{rSubsection}
+\begin{rSubsection}{\bf Security Engineer Intern}{March 2026 - May 2026}{NoHack Labs}{Remote}
+\item Identified 20+ vulnerabilities (5 critical) using AI-assisted static analysis and manual verification.
+\item Authored detailed VAPT reports with remediation guides, accelerating triage and fix cycles for engineering teams.
+\end{rSubsection}
+\begin{rSubsection}{\bf Software Engineer}{May 2025 - August 2025}{Code for GoodTech Dedicated Mentoring Program}{Remote}
+\item Built a FastAPI backend to parse and bulk-upload XLSForm files with validation, management and deletion workflows.
+\item Deployed a modular Angular frontend with inline error handling, reducing file validation and remediation time by 4x.
+\item Wrote comprehensive unit and integration tests for frontend and backend, sustaining 72\%+ code coverage.
+\end{rSubsection}
+\begin{rSubsection}{\bf Board Member and Forensics Subsystem Head}{Jan 2024 - Aug 2026}{Cryptonite - Academic Cybersecurity Team}{On-Site}
+\item Lead the forensics domain of a top-3 national team, planning 10+ weeks of training across 2 domains for junior members.
+\item Authored 5+ security challenges for the team's international CTF with 3,500+ participants.
+\end{rSubsection}
+\end{rSection}
+
+\vspace{-0.4em}
+\begin{rSection}{Achievements}
+\begin{list}{-}{\leftmargin=1em \itemindent=0em}
+\itemsep -0.6em
+\item 1st Position, Smart India Hackathon 2024 held at IIT Jammu.\hfill \textbf{Dec 2024}
+\item 1st Position, ISEA-ISAP hardware security hackathon held by IIT Madras.\hfill \textbf{Jan 2026}
+\item 1st Position, GITxIITB Capture the Flag (CTF) sponsored by IIT Bombay Trust Lab.\hfill \textbf{May 2025}
+\item Awarded a Shubhra Kar Linux Foundation Training Scholarship (LiFT), one of only 500 recipients worldwide.\hfill \textbf{June 2026}
+\end{list}
+\end{rSection}
+
+\vspace{-0.6em}
+\begin{rSection}{Projects}
+\noindent \textbf{YatraGPT \textbar{} \href{https://github.com/vee1e/finova}{github}}: AI travel assistant (Next.js, TypeScript) that uses Gemini 1.5 Flash to extract structured \texttt{\{src, dest, date\}} intent from natural-language requests, then calls RapidAPI's Indian Railways (IRCTC) APIs for station, train and fare data -- ranking by duration and returning the top 3 with general/Tatkal fares in chat. 2nd place, SoftLaunch Hackathon.\par
+\vspace{-0.6em}
+\noindent \textbf{Astraeus \textbar{} \href{https://github.com/Addy-Da-Baddy/Astraeus}{github}}: Real-time orbital collision-risk platform (Python, Flask) tracking 12,000+ objects from Celestrak TLE feeds via a 4-model ML ensemble (Random Forest, XGBoost, LightGBM, CatBoost) and LSTM/GRU prediction, with a Three.js 3D visualization of color-coded satellites/debris and a live risk dashboard.\par
+\vspace{-0.6em}
+\noindent \textbf{krply \textbar{} \href{https://github.com/vee1e/krply}{github} \textbar{} \href{https://krply.lverma.com}{live}}: gap-aware Kubernetes history and replay tool that journals cluster state to SQLite, detects recording gaps, materializes snapshots and plans sanitized replays with dry-run validation.\par
+\vspace{-0.6em}
+\noindent \textbf{ZenZone \textbar{} \href{https://github.com/vee1e/genai}{github}}: Expo React Native (TypeScript) meditation app with a Flask + ConvaAI LLM writing mood-tagged journal cards.\par
+\end{rSection}
+
+\vspace{-0.3em}
+\begin{rSection}{Education}
+    {\bf Manipal Institute of Technology, Manipal} \hfill {July 2023 - August 2027}  \\
+    {B.Tech in Electronics Engineering, Minor in Computing} \hfill \\
+\end{rSection}
+
+\end{document}
