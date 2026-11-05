@@ -1,6 +1,6 @@
 # CV/Resume
 
-Resume source (LaTeX) and compiled PDF for **https://lverma.com/resume**.
+Resume source in Typst and the compiled PDF for **https://lverma.com/resume**.
 
 Inspired (shamelessly copied) from https://github.com/sohomdatta1/cv.
 
@@ -16,15 +16,19 @@ Also published via GitHub Pages (`docs/`) at `https://vee1e.github.io/resume/`.
 
 | Path | Role |
 |------|------|
-| `Lakshit_Verma_Resume.tex` | Resume content source |
-| `resume.cls` | LaTeX class |
+| `Lakshit_Verma_Resume.typ` | Resume content source |
+| `fonts-cm/` | Computer Modern fonts converted from TeX to OpenType, with AFM kerning |
+| `build.sh` | Build script |
 | `docs/` | GitHub Pages publish dir (PDF, thumbnails) |
-| `og-card.png` | 1200×630 social share card (also mirrored to `website/public/assets/resume-og.png`) |
+| `og-card.png` | 1200x630 social share card (also mirrored to `website/public/assets/resume-og.png`) |
 | `og-thumbnail.png` | Full-page preview of the resume PDF |
 | `robots.txt` / `sitemap.xml` | Crawl discovery |
 
+The old LaTeX source (`Lakshit_Verma_Resume.tex`, `resume.cls`) is kept as an archive. Typst is the active build.
+
 ## Build notes
 
-1. Compile the PDF from LaTeX when content changes.
-2. Refresh `og-thumbnail.png` from the rendered PDF if the layout changes.
+1. Build with `./build.sh`. To write straight into the publish dir, run `./build.sh docs/Lakshit_Verma_Resume.pdf`.
+2. Refresh `og-thumbnail.png` from the rendered PDF if the layout changes:
+   `pdftoppm -png -r 300 -singlefile docs/Lakshit_Verma_Resume.pdf docs/og-thumbnail`
 3. Social image URL is hard-coded to `https://lverma.com/assets/resume-og.png` so previews work on every host.
