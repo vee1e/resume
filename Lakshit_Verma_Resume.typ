@@ -130,7 +130,7 @@
 #bl(611.877)[
   *Supplicant #text(font: "SFRM1000")[|] #link("https://github.com/vee1e/supplicant")[GitHub]:* Python-based supply-chain security diff scanner. Compares each version bump to package’s own release history, flagging anything that breaks patterns, rebuilding deleted versions from CDN archives. Full security-scored cold diffs with live vulnerability checks run in #text(font: "SFRM1000")[<]2s.]
 #bl(653.720)[
-  *Naksheap #text(font: "SFRM1000")[|] #link("https://github.com/vee1e/naksheap")[GitHub]:* Rust heap parser for analysis of cross-platform crash dumps. Rebuilds the live heap of a stripped, optimized binary from its core dump, locating objects, allocations and pointers. Recovered 42,000 objects and 63,000 pointers from a 105 MB core dump in 0.4 seconds, over 100,000 objects per second.]
+  *Naksheap #text(font: "SFRM1000")[|] #link("https://github.com/vee1e/naksheap")[GitHub] #text(font: "SFRM1000")[|] #link("https://naksheap.lverma.com")[Live]:* Rust heap parser for analysis of cross-platform crash dumps. Rebuilds the live heap of a stripped, optimized binary from its core dump, locating objects, allocations and pointers. Recovered 42,000 objects and 63,000 pointers from a 105 MB core dump in 0.4 seconds, over 100,000 objects per second.]
 #bl(695.564)[
   *Agora #text(font: "SFRM1000")[|] #link("https://github.com/vee1e/agora")[GitHub]:* Multi-agent audit harness where 4 adversarial LLM agents (finder, killer, judge, exploit) debate findings on an append-only message board and prove survivors with sandboxed PoCs. A 50-minute run at 3M tokens yielded 35 candidates and 5 crashes, surfacing 2+ heap overflows and out-of-bounds stack writes.]
 
