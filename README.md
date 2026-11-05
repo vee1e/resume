@@ -24,7 +24,6 @@ Also published via GitHub Pages (`docs/`) at `https://vee1e.github.io/resume/`.
 | `og-thumbnail.png` | Full-page preview of the resume PDF |
 | `robots.txt` / `sitemap.xml` | Crawl discovery |
 
-The old LaTeX source (`Lakshit_Verma_Resume.tex`, `resume.cls`) is kept as an archive. Typst is the active build.
 
 ## Build notes
 
