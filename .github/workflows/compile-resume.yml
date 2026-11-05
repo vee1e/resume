@@ -36,11 +36,6 @@ jobs:
           sudo install -m 755 /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
           typst --version
 
-      - name: Install PDF tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils
-
       - name: Compile Resume
         env:
           TZ: "Asia/Kolkata"
@@ -50,7 +45,7 @@ jobs:
 
       - name: Generate high-res thumbnail
         run: |
-          pdftoppm -png -r 300 -singlefile docs/Lakshit_Verma_Resume.pdf docs/og-thumbnail
+          typst compile --font-path fonts-cm --format png --ppi 300 Lakshit_Verma_Resume.typ docs/og-thumbnail.png
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
