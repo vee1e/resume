@@ -76,8 +76,8 @@
 #section(112.163, "Technical Experience")
 
 #bl(129.443, par(justify: false)[
-  *Software Engineer* #h(1fr) May 2026 - August 2026 \
-  Google Summer of Code (GSoC) under Mandiant #h(1fr) Remote#h(-0.5pt)
+  *GSoC Contributor* #h(1fr) May 2026 - August 2026 \
+  Google Summer of Code (GSoC), Mandiant FLARE #h(1fr) Remote#h(-0.5pt)
 ])
 #bullet(156.342)[Extended the FLOSS malware string extraction framework with features derived from an experimental branch.]
 #bullet(169.293)[Implemented a cross-platform PE/ELF/Mach-O executable parser for extracting binary metadata, sections and functions.]
@@ -85,7 +85,7 @@
 #bullet(195.196)[Shipped a graphical web interface to visualize the tool’s output reaching 100\% CLI feature parity.]
 
 #bl(210.140, par(justify: false)[
-  *Research Intern* #h(1fr) September 2025 - June 2026 \
+  *Research Intern* #h(1fr) September 2025 - December 2025 \
   Schneider Electric and MAHE #h(1fr) Manipal, Karnataka, India#h(-0.5pt)
 ])
 #bullet(237.039)[Built an AI AppSec platform with 329K+ CVEs and 3.3K+ attack chains, coupling SAST, binary analysis and exploit testing.]
@@ -94,7 +94,7 @@
 #bullet(275.893)[Automated binary analysis with a sandbox and Radare2, with a confirm-patch-verify loop for agent-suggested fixes.]
 
 #bl(290.837, par(justify: false)[
-  *Security Engineer Intern* #h(1fr) March 2026 - May 2026 \
+  *Cybersecurity Intern* #h(1fr) 23 March 2026 - 31 May 2026 \
   NoHack Labs #h(1fr) Remote#h(-0.5pt)
 ])
 #bullet(317.736)[Identified 20+ vulnerabilities including 5 critical issues using AI-assisted SAST and manual verification in OpenClaw.]
@@ -102,7 +102,7 @@
 
 #bl(345.632, par(justify: false)[
   *Software Engineer* #h(1fr) May 2025 - August 2025 \
-  Code for GoodTech Dedicated Mentoring Program #h(1fr) Remote#h(-0.5pt)
+  Code for GoodTech (formerly GovTech) Dedicated Mentoring Program #h(1fr) Remote#h(-0.5pt)
 ])
 #bullet(372.531)[Created a FastAPI backend to parse and bulk-upload XLSForm files for validation, management and deletion.]
 #bullet(385.482)[Deployed a modular Angular frontend with inline errors, reducing file validation and remediation time by 4x.]
