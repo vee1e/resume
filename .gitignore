@@ -1,7 +1,3 @@
-*.aux
-*.log
-*.out
-*.toc
 *.pdf
 
 .DS_Store
